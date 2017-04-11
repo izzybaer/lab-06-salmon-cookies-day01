@@ -9,7 +9,7 @@ var seatacAirportUl = document.getElementById('seatacairport');
 var storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 
-function Store(title){
+function Store(title, minHourlyCust, maxHourlyCust, avgCookiesPurch){
   this.title = title;
   this.cookieBasket = 0;
   this.locationResults = [];
@@ -20,7 +20,7 @@ function Store(title){
 }
 
 Store.prototype.randomCustNum = function(){
-  return Math.floor(Math.random()* (65 - 23 + 1)) + 23;
+  return Math.floor(Math.random()* (this.maxHourlyCust - this.minHourlyCust + 1)) + this.minHourlyCust;
 };
 
 Store.prototype.cookiesPerHour = function(){
@@ -29,4 +29,11 @@ Store.prototype.cookiesPerHour = function(){
     var totalCookiesPerHour = Math.floor(this.avgCookiesPurch * this.randomCustNum());
     this.locationResults.push(storeHours[i] + ' = ' + totalCookiesPerHour);
     this.cookieBasket = totalCookiesPerHour + this.cookieBasket;
+  }
 };
+
+var firstAndPike = new Store('1st and Pike', 23, 65, 6.3);
+var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+var alki = new Store('Alki', 2, 16, 4.6);
+var seatacAirport = new Store('Seatac Airport');

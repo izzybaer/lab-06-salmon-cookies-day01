@@ -34,7 +34,6 @@ Store.prototype.cookiesPerHour = function(){
 
 Store.prototype.render = function(){
   var storeCell;
-  var addTHead = document.createElement('thead');
   var addRow = document.createElement('tr');
   this.tableElement = addRow;
   var locationHeader = document.createElement('td');
@@ -49,12 +48,20 @@ Store.prototype.render = function(){
   newTable.appendChild(this.tableElement);
 };
 
+function addTable(){
+  var newEl;
+  for(var i = 0; i < 16; i++) {
+    newEl = document.createElement('tr');
+    newEl.textContent = this.locationResults[i];
+    this.tableElement.appendChild(newEl);
+  }
+
 }
 function addTableHeader(){
   var hoursCell;
   var addRow = document.createElement('tr');
   var addHead = document.createElement('th');
-  addRow.appendChild(addCell);
+  addRow.appendChild(addHead);
   for(var i = 0; i < 15; i++){
 
     hoursCell = document.createElement('th');

@@ -17,7 +17,7 @@ var seattleCenterUl = document.getElementById('seattlecenter');
 var alkiUl = document.getElementById('alki');
 var seatacAirportUl = document.getElementById('seatacairport');
 
-var storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+
 
 // pike location
 var firstAndPike = {
@@ -29,12 +29,12 @@ var firstAndPike = {
   locationResults: [],
   avgCookiesPurch: 6.3,
   randomCustNum: function(){
-    return Math.round(Math.random()* (65 - 23)) + 23;
+    return Math.floor(Math.random()* (65 - 23 + 1)) + 23;
   },
   cookiesPerHour: function(){
     var firstAndPikeLi;
     for (var i = 0; i < 15; i++) {
-      var totalCookiesPerHour = Math.round(this.avgCookiesPurch * this.randomCustNum());
+      var totalCookiesPerHour = Math.floor(this.avgCookiesPurch * this.randomCustNum());
       this.locationResults.push(storeHours[i] + ' = ' + totalCookiesPerHour);
       this.cookieBasket = totalCookiesPerHour + this.cookieBasket;
       firstAndPikeLi = document.createElement('li');

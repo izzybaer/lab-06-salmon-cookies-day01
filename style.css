@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #FF9A89;
 }
 
 html, body {
@@ -15,4 +16,17 @@ html, body {
 td {
   border: 1px solid black;
 
+}
+
+body, h1 {
+  font-family: Garamond;
+  font-size: 14px;
+
+}
+
+#title {
+  font-family: Garamond;
+  font-size: 40px;
+  text-align:center;
+  padding-bottom: 20px;
 }

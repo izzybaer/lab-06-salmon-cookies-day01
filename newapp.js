@@ -34,6 +34,9 @@ Store.prototype.cookiesPerHour = function(){
 
 Store.prototype.render = function(){
   var storeCell;
+  var addTHead = document.createElement('thead');
+  var addRow = document.createElement('tr');
+  this.tableElement = addRow;
   var locationHeader = document.createElement('td');
   locationHeader.textContent = this.title;
   this.tableElement.appendChild(locationHeader);
@@ -41,18 +44,40 @@ Store.prototype.render = function(){
     storeCell = document.createElement('td');
     storeCell.textContent = this.locationResults[i];
     this.tableElement.appendChild(storeCell);
-
   }
+  var newTable = document.getElementById('sales-report');
+  newTable.appendChild(this.tableElement);
 };
 
+}
+function addTableHeader(){
+  var hoursCell;
+  var addRow = document.createElement('tr');
+  var addHead = document.createElement('th');
+  addRow.appendChild(addCell);
+  for(var i = 0; i < 15; i++){
 
+    hoursCell = document.createElement('th');
+    hoursCell.textContent = storeHours[i];
+    addRow.appendChild(hoursCell);
+  }
+  var newTable = document.getElementById('sales-report');
+  newTable.appendChild(addRow);
+
+
+}
+
+// function addTableFooter(){
+//
+// }
 
 // function for the footer should not be a method
 // function for the header should not be a method
-
+addTableHeader();
 
 var firstAndPike = new Store('1st and Pike',firstAndPikeRow, 23, 65, 6.3);
 firstAndPike.cookiesPerHour();
+
 firstAndPike.render();
 
 var seattleCenter = new Store('Seattle Center',seattleCenterRow, 11, 38, 3.7);

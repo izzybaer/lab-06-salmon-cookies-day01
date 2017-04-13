@@ -5,9 +5,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #FF9A89;
 }
 
 html, body {
   height: 100%;
 
+}
+
+td {
+  border: 1px solid black;
+
+}
+
+body, h1 {
+  font-family: Garamond;
+  font-size: 14px;
+
+}
+
+#title {
+  font-family: Garamond;
+  font-size: 40px;
+  text-align:center;
+  padding-bottom: 20px;
+}
+
+#submit {
+  display:inline-block;
+  width: auto;
+  background-color: grey;
+  border-radius: 2px;
+  padding: 3px;
+  font-family: Garamond;
+  font-weight:bold;
+  font-size: 18px;
+}
+
+#submit {
+  text-align: center;
+  margin: auto;
 }

@@ -30,3 +30,19 @@ body, h1 {
   text-align:center;
   padding-bottom: 20px;
 }
+
+#submit {
+  display:inline-block;
+  width: auto;
+  background-color: grey;
+  border-radius: 2px;
+  padding: 3px;
+  font-family: Garamond;
+  font-weight:bold;
+  font-size: 18px;
+}
+
+#submit {
+  text-align: center;
+  margin: auto;
+}

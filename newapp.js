@@ -48,15 +48,15 @@ Store.prototype.render = function(){
   newTable.appendChild(this.tableElement);
 };
 
-function tableAdd(){
-  var newEl;
-  for(var i = 0; i < 16; i++) {
-    newEl = document.createElement('tr');
-    newEl.textContent = this.locationResults[i];
-    this.tableElement.appendChild(newEl);
-  }
-
-}
+// function tableAdd(){
+//   var newEl;
+//   for(var i = 0; i < 16; i++) {
+//     newEl = document.createElement('tr');
+//     newEl.textContent = this.locationResults[i];
+//     this.tableElement.appendChild(newEl);
+//   }
+//
+// }
 function tableHeaderAdd(){
   var hoursCell;
   var addRow = document.createElement('tr');
@@ -80,6 +80,7 @@ function tableHeaderAdd(){
 
 // function for the footer should not be a method
 // function for the header should not be a method
+
 tableHeaderAdd();
 
 var firstAndPike = new Store('1st and Pike',firstAndPikeRow, 23, 65, 6.3);

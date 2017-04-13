@@ -9,7 +9,7 @@ var seatacAirportRow = document.getElementById('seatacairport');
 var storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 
-function Store(title, tableElement, minHourlyCust, maxHourlyCust, avgCookiesPurch){
+function Store(title, minHourlyCust, maxHourlyCust, avgCookiesPurch, tableElement){
   this.title = title;
   this.tableElement = tableElement;
   this.cookieBasket = 0;
@@ -101,3 +101,28 @@ alki.render();
 var seatacAirport = new Store('Seatac Airport',seatacAirportRow, 3, 24, 1.2);
 seatacAirport.cookiesPerHour();
 seatacAirport.render();
+
+
+
+function buttonSubmitLocation() {
+  event.preventDefault();
+
+  var form = event.target;
+  var addNewStore = form.addNewStore.value;
+  var minimumCust = form.minimumCust.value;
+  var maximumCust = form.maximumCust.value;
+  var cookiesPurch = form.cookiesPurch.value;
+//
+  form.addNewStore.value = '';
+  form.minimumCust.value = '';
+  form.maximumCust.value = '';
+  form.cookiesPurch.value = '';
+
+  var brandNewStore = new Store(addNewStore, minimumCust, maximumCust, cookiesPurch);
+  brandNewStore.cookiesPerHour();
+  brandNewStore.render();
+
+}
+
+var storeCreateForm = document.getElementById('add-store');
+storeCreateForm.addEventListener('submit', buttonSubmitLocation);

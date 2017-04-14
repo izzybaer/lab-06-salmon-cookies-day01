@@ -10,18 +10,15 @@
 
 html, body {
   height: 100%;
-
 }
 
 td {
   border: 1px solid black;
-
 }
 
 body, h1 {
   font-family: Garamond;
   font-size: 14px;
-
 }
 
 #title {

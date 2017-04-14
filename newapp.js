@@ -8,7 +8,6 @@ var seatacAirportRow = document.getElementById('seatacairport');
 
 var storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
-
 function Store(title, tableElement, minHourlyCust, maxHourlyCust, avgCookiesPurch){
   this.title = title;
   this.tableElement = tableElement;
@@ -55,8 +54,8 @@ function tableAdd(){
     newEl.textContent = this.locationResults[i];
     this.tableElement.appendChild(newEl);
   }
-
 }
+
 function tableHeaderAdd(){
   var hoursCell;
   var addRow = document.createElement('tr');
@@ -70,16 +69,8 @@ function tableHeaderAdd(){
   }
   var newTable = document.getElementById('sales-report');
   newTable.appendChild(addRow);
-
-
 }
 
-// function addTableFooter(){
-//
-// }
-
-// function for the footer should not be a method
-// function for the header should not be a method
 tableHeaderAdd();
 
 var firstAndPike = new Store('1st and Pike',firstAndPikeRow, 23, 65, 6.3);

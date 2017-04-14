@@ -28,21 +28,88 @@ body, h1 {
   font-family: Garamond;
   font-size: 40px;
   text-align:center;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  color: #0C217D;
 }
 
-#submit {
+#add-store {
   display:inline-block;
-  width: auto;
-  background-color: grey;
+  width: 175px;
+  background-color: #4D8F70;
   border-radius: 2px;
   padding: 3px;
   font-family: Garamond;
   font-weight:bold;
   font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+input {
+  height:20px;
+  border-radius: 8px;
+  padding: 1px;
+  margin-top: 5px;
+  /*margin: auto;*/
+  display: block;
+  text-align: center;
+  font-family: Garamond;
+  font-size: 14px;
 }
 
 #submit {
+  border-radius: 8px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding:1px;
+  width: 50%;
+  font-family: Garamond;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #939C94;
+  color: #0C217D;
+}
+
+#box {
   text-align: center;
+  width: 75%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#logo {
+  width: 500px;
+  height: 250px;
+  margin:auto;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("images/Salmon.png");
+}
+
+#sales-report {
+  width:70%;
+  height: 500px;
+  display: block;
+  align-content: center;
   margin: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #16327D;
+
+}
+
+tr,td {
+ text-align:center;
+ width: auto;
+ height: 10px;
+ border: 2px solid #CACCC9 ;
+ border-collapse: collapse;
+ padding: 5px;
 }

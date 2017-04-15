@@ -48,15 +48,6 @@ Store.prototype.render = function(){
   newTable.appendChild(this.tableElement);
 };
 
-// function tableAdd(){
-//   var newEl;
-//   for(var i = 0; i < 16; i++) {
-//     newEl = document.createElement('tr');
-//     newEl.textContent = this.locationResults[i];
-//     this.tableElement.appendChild(newEl);
-//   }
-//
-// }
 function tableHeaderAdd(){
   var hoursCell;
   var addRow = document.createElement('tr');
@@ -70,16 +61,8 @@ function tableHeaderAdd(){
   }
   var newTable = document.getElementById('sales-report');
   newTable.appendChild(addRow);
-
-
 }
 
-// function addTableFooter(){
-//
-// }
-
-// function for the footer should not be a method
-// function for the header should not be a method
 
 tableHeaderAdd();
 
@@ -104,7 +87,6 @@ seatacAirport.cookiesPerHour();
 seatacAirport.render();
 
 
-
 function buttonSubmitLocation() {
   event.preventDefault();
 
@@ -113,7 +95,7 @@ function buttonSubmitLocation() {
   var minimumCust = form.minimumCust.value;
   var maximumCust = form.maximumCust.value;
   var cookiesPurch = form.cookiesPurch.value;
-//
+
   form.addNewStore.value = '';
   form.minimumCust.value = '';
   form.maximumCust.value = '';
@@ -122,7 +104,6 @@ function buttonSubmitLocation() {
   var brandNewStore = new Store(addNewStore, minimumCust, maximumCust, cookiesPurch);
   brandNewStore.cookiesPerHour();
   brandNewStore.render();
-
 }
 
 var storeCreateForm = document.getElementById('add-store');

@@ -10,18 +10,15 @@
 
 html, body {
   height: 100%;
-
 }
 
 td {
   border: 1px solid black;
-
 }
 
 body, h1 {
   font-family: Garamond;
   font-size: 14px;
-
 }
 
 #title {
@@ -45,7 +42,6 @@ body, h1 {
   text-align: center;
   border-radius: 10px;
   margin-bottom: 75%;
-
 }
 
 input {
@@ -78,8 +74,6 @@ input {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-
-
 }
 
 #logo {
@@ -100,11 +94,9 @@ input {
   display: block;
   align-content: center;
   margin: auto;
-  /*margin-top: 20px;*/
   border-collapse: collapse;
   font-size: 16px;
   color: #16327D;
-
 }
 
 tr,td {
